@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <test name="ChromeTests" verbose="2" parallel = "classes">
+    <classes>
+      <class name="Testing.NewTestNgDemo1"/>
+      <class name="Testing.NewTestNgDemo2"/>
+    </classes>
+  </test> 
+</suite> <!-- Default suite -->
