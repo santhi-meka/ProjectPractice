@@ -13,7 +13,7 @@ public class Accessories {
 	WebDriver driver;
   @Test
   public void Battery() {
-	  
+	  //THis is for demo
 	  WebDriverManager.chromedriver().setup();
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
