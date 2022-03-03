@@ -1,10 +1,12 @@
 import org.testng.annotations.Test;
 
 public class Excel {
-  @Test
-  public void ExcelExample() {
-	  
-	  
-	  
-  }
+
+	/**
+	 * Method is for capturing the data for login page
+	 */
+	@Test
+	public void ExcelExample() {
+
+	}
 }
