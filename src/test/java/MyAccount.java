@@ -34,8 +34,11 @@ public class MyAccount {
 		     
 		     WebElement AddBook = driver.findElement(By.xpath("//div[@class='your-account-nav']/ul/li[4]"));
 			   act.moveToElement(AddBook).build().perform();
-			   //AddBook.click();
-			   driver.findElement(By.xpath("//div[@class='your-account-nav']/ul/li[4]")).click();
+			   AddBook.click();
+			  // driver.findElement(By.xpath("//div[@class='your-account-nav']/ul/li[4]")).click();
+			   
+			   driver.findElement(By.xpath("//div[@class='top-links']/a[2]")).click();
+			   
 			   
   }
 }

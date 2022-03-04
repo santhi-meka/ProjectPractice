@@ -15,11 +15,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AxiomTelecomExcel {
      WebDriver driver;
 	@Test
-  public void AT() throws IOException, Exception {
+  public void AT() throws  Exception {
 		WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();
 	        driver.manage().window().maximize();
 	  driver.get("https://www.axiomtelecom.com/?fbclid=IwAR0186UFhkHwuDNPpWfXtbhiNjvEuoi4bjbbsfqvNOsBcGBWdp6EVPyXemY");
+	  driver.findElement(By.xpath("//div[@class='top-links']/a[6]")).click();
+		Thread.sleep(2000);
 	  
 	  String xlfile = "E:\\ExcelFiles\\AxiomTelecom.xlsx";
 	  FileInputStream f1 = new FileInputStream(xlfile);
@@ -31,9 +33,9 @@ public class AxiomTelecomExcel {
 		  XSSFRow row = sheet.getRow(r);
 		  String mailid = row.getCell(0).getStringCellValue();
 		  String pwd = row.getCell(1).getStringCellValue();
-		  driver.findElement(By.xpath("//input[@id='user_session_email']")).sendKeys(mailid);
-		  driver.findElement(By.xpath("//input[@id='user_session_password']")).sendKeys(pwd);
-		  driver.findElement(By.xpath("//input[@id='user_session_submit']")).click();
+		  driver.findElement(By.id("user_session_email")).sendKeys(mailid);
+		  driver.findElement(By.id("user_session_password")).sendKeys(pwd);
+		  driver.findElement(By.id("user_session_submit")).click();
 		  Thread.sleep(2000);
 		  //String CurrUrl = driver.getCurrentUrl();
 		  
