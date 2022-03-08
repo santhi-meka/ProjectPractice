@@ -12,8 +12,8 @@ public class MyAccount {
 	@Test
   public void MyAcc() throws Exception {
 	  
-	  WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+	 // WebDriverManager.chromedriver().setup();
+		//driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.axiomtelecom.com/?fbclid=IwAR0186UFhkHwuDNPpWfXtbhiNjvEuoi4bjbbsfqvNOsBcGBWdp6EVPyXemY");
 		

@@ -8,6 +8,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -16,9 +19,15 @@ public class AxiomTelecomExcel {
      WebDriver driver;
 	@Test
   public void AT() throws  Exception {
-		WebDriverManager.chromedriver().setup();
-	        driver = new ChromeDriver();
-	        driver.manage().window().maximize();
+		//WebDriverManager.chromedriver().setup();
+	        //driver = new ChromeDriver();
+	      // WebDriverManager.firefoxdriver().setup();
+	      //  driver = new FirefoxDriver();
+	            WebDriverManager.edgedriver().setup();
+	          driver = new EdgeDriver();
+	  //WebdriverManager.IEdriver().setup();
+	  //driver = new InternetExplorerDriver();
+		driver.manage().window().maximize();
 	  driver.get("https://www.axiomtelecom.com/?fbclid=IwAR0186UFhkHwuDNPpWfXtbhiNjvEuoi4bjbbsfqvNOsBcGBWdp6EVPyXemY");
 	  driver.findElement(By.xpath("//div[@class='top-links']/a[6]")).click();
 		Thread.sleep(2000);

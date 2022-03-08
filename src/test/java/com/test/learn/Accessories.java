@@ -14,8 +14,8 @@ public class Accessories {
 	@Test
 	public void Battery() {
 		//THis is for demo
-		WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		//WebDriverManager.chromedriver().setup();
+		// driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.axiomtelecom.com/?fbclid=IwAR0186UFhkHwuDNPpWfXtbhiNjvEuoi4bjbbsfqvNOsBcGBWdp6EVPyXemY");
 		WebElement accessories = driver.findElement(By.xpath("//div[@id='nav-menu-1279478']/ul/li[4]"));
